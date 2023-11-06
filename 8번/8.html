@@ -1,1 +1,27 @@
-<button class="btn">prompt 창 띄우기</button>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="btn">prompt 창 띄우기</button>
+    <script>
+      //버튼 요소 가져오기
+      const prm = document.querySelector(".btn");
+
+      // 클릭했을 때, prompt 창이 띄워지고 값은 input이라는 변수에 저장???
+      prm.addEventListener("click", function () {
+        const input = prompt("원하는 내용을 입력하세요: ");
+      });
+
+      // input의 변수가 null과 일치하지 않으면(null이 빈값이니까 input이 제대로 입력되면 null 나올 리 없음)
+      //alert창에 입력한 글이 보여지도록?인데 실패
+      if (input !== null) {
+        alert("입력한 내용:" + input);
+      }
+    </script>
+  </body>
+</html>
